@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World [ Hexo ]</title>
+    
+      <!-- stylesheets list from _config.yml -->
+      
+        <link rel="stylesheet" href="/css/mestino.css">
+      
+    
+    <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/uikit/3.3.1/css/uikit.min.css">
+    <script src="https://cdn.staticfile.org/uikit/3.3.1/js/uikit.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css">
+    <script src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" async="async"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" async="async">
+    <script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js" async="async"></script>
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js" async="async"></script>
+    <script src="//at.alicdn.com/t/font_1643892_5kllk89yikh.js" async="async"></script>
+    <script src="/js/mestino.js"></script>
+    <!--本地搜索-->
+    
+    <script src="/js/search.js"></script>
+    <script type="text/javascript"> 
+      var search_path = "search.xml";
+      if (search_path.length == 0) {
+        search_path = "search.xml";
+      }
+      var path = "/" + search_path;
+      searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+    
+    <!--mestino配置转移-->
+<meta name="generator" content="Hexo 4.2.0"></head>
+  <body background="https://api.dujin.org/bing/1920.php" style="background-attachment:fixed">
+    <div id="menu" class="uk-background-primary">
+      <nav
+        class="uk-navbar-container uk-navbar-transparent uk-light uk-animation-toggle uk-animation-scale-down"
+        uk-navbar
+      >
+        <div class="space"></div>
+        <div class="uk-navbar-left">
+          <img src="/image/avator.jpg" width="50" height="50">
+          <ul class="uk-navbar-nav">
+            
+            <li class="uk-text-emphasis">
+              <a href="/">Home</a>
+            </li>
+            
+            <li class="uk-text-emphasis">
+              <a href="/about">About</a>
+            </li>
+            
+            <li class="uk-text-emphasis">
+              <a href="/contact">Contact</a>
+            </li>
+            
+            <li class="uk-text-emphasis">
+              <a href="/archives">Archives</a>
+            </li>
+            
+          </ul>
+        </div>
+        <div class="uk-navbar-right">
+          
+          <a data-fancybox data-src="#site_search" href="javascript:;">
+              <!--It is a fake search-->
+              <div class="uk-background-muted uk-search uk-search-default"style="position:relative;left:-20%;border-radius: 25px;">
+              <input type="text" name="q" results="0" placeholder="search my blog..." class="uk-light uk-search-input"></input>
+              </div>
+          </a>
+          <div id="site_search" class="uk-search uk-search-default" style="display: none;width: 50%">
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="biubiu..." class="uk-search-input" style="border-radius: 25px;"></input>
+            <div id="local-search-result"></div>
+            <div class="space"></div>
+          </div>
+          
+        </div>
+      </nav>
+    </div>
+    <div uk-grid style="position: relative;left: 10%;top: 5%">
+    <article class="post uk-flex uk-flex-center" style="position: relative;right: 20%;top: -10%">
+  <div class="uk-card uk-card-default uk-card-hover uk-card-body uk-width-2-3">
+    <h3 class="uk-card-title">Default</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <div class="post-title">
+    <h2 class="title">Hello World</h2>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2020-02-17</span>
+  </div>
+  <div class="post-content">
+    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+  </div>
+</div>
+</article>
+    <div class="uk-width-1-3" style="position: relative;left: 1%;top: -20%">
+    <div class="uk-width-3-4" uk-grid>
+    
+    <div class="uk-card uk-card-default uk-card-body uk-card-hover uk-card-small" style="border-radius: 5%;">
+    <div class="uk-card-media-top uk-padding-remove">
+        <img style="margin: 0 auto;" src="https://img.vim-cn.com/b0/9c45881ad163e90405b8141914d3c1939514e6.jpg" class="round_icon" alt="">
+    </div>
+    <h3 class="uk-card-title uk-text-center uk-padding-remove" style="margin-top: 0px;margin: 0px 0px 0px 0px">John Doe</h3>
+    <h5 class="uk-text-center uk-padding-remove" style="margin-top: 0px;margin: 0px 0px 0px 0px">John Doe</h5>
+    <div class="uk-column-1-3 uk-column-divider uk-padding-remove" style="column-gap: 0px;">
+        <p class="uk-text-lead uk-text-emphasis uk-text-nowrap uk-text-center">文章</p>
+        <p class="uk-text-lead uk-text-emphasis uk-text-nowrap uk-text-center">赞</p>
+        <p class="uk-text-lead uk-text-emphasis uk-text-nowrap uk-text-center">分类</p>
+    </div>
+    <div class="uk-column-1-3 uk-column-divider " style="column-gap: 0px;">
+        <p class="uk-text-center">19</p>
+        <p class="uk-text-center">0</p>
+        <p class="uk-text-center">0</p>
+    </div>
+    <div id="share" class="uk-flex uk-flex-center uk-flex-around">
+        
+            <a href="qq">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-qq"></use>
+            </svg>
+            </a>
+        
+            <a href="https://github.com/wzy2006" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-github"></use>
+            </svg>
+            </a>
+        
+            <a href="mailto:3450354617@qq.com">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-email"></use>
+            </svg>
+            </a>
+        
+    </div>
+</div>
+<meting-js
+	server="netease"
+	type="playlist"
+	id="60198">
+</meting-js>
+    
+    <div class="uk-card uk-card-default uk-card-body uk-card-hover" >
+    12342324r
+    <meting-js
+	server="netease"
+	type="playlist"
+	id="60198">
+</meting-js>
+</div>
+    
+    </div>
+</div>
+    </div>
+    <div id="bottom-outer">
+      <div id="bottom-inner">
+        Site by John Doe using
+        <a href="https://github.com/wzy2006/mestino" target="_blank" rel="noopener">Mestino</a>.
+        <br />
+        <a href="/">Home</a>
+      </div>
+    </div>
+
+    
+    <!-- scripts list from theme config.yml -->
+    
+    <script src="/js/mestino.js"></script>
+     
+  </body>
+</html>
