@@ -21,7 +21,61 @@
     <script src="//at.alicdn.com/t/font_1643892_5kllk89yikh.js" async="async"></script>
     <script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+    <script type="text/javascript" color="220,220,220" opacity='0.7' zIndex="0" count="100" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
     <!--本地搜索-->
+    
+    <script async="async">
+    $(document).ready(function(){
+    document.addEventListener('touchmove', function (e) {
+        e.preventDefault()
+    })
+    var c = document.getElementById("piao"),
+        x = c.getContext('2d'),
+        pr = window.devicePixelRatio || 1,
+        w = window.innerWidth,
+        h = window.innerHeight,
+        f = 90,
+        q,
+        m = Math,
+        r = 0,
+        u = m.PI*2,
+        v = m.cos,
+        z = m.random
+    c.width = w*pr
+    c.height = h*pr
+    x.scale(pr, pr)
+    x.globalAlpha = 0.6
+    function i(){
+        x.clearRect(0,0,w,h)
+        q=[{x:0,y:h*.7+f},{x:0,y:h*.7-f}]
+        while(q[1].x<w+f) d(q[0], q[1])
+    }
+    function d(i,j){   
+        x.beginPath()
+        x.moveTo(i.x, i.y)
+        x.lineTo(j.x, j.y)
+        var k = j.x + (z()*2-0.25)*f,
+            n = y(j.y)
+        x.lineTo(k, n)
+        x.closePath()
+        r-=u/-50
+        x.fillStyle = '#'+(v(r)*127+128<<16 | v(r+u/3)*127+128<<8 | v(r+u/3*2)*127+128).toString(16)
+        x.fill()
+        q[0] = q[1]
+        q[1] = {x:k,y:n}
+    }
+    function y(p){
+        var t = p + (z()*2-1.1)*f
+        return (t>h||t<0) ? y(p) : t
+    }
+    document.onclick = i
+    document.ontouchstart = i
+    i()
+  });
+</script>
+    <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/js/FunnyTitle.js" async="async"></script>
     
     <script src="/js/search.js"></script>
     <script type="text/javascript"> 
@@ -35,7 +89,7 @@
     
     <!--mestino配置转移-->
 <meta name="generator" content="Hexo 4.2.0"></head>
-  <body background="https://api.dujin.org/bing/1920.php" style="background-attachment:fixed">
+  <body background="" style="background-attachment:fixed">
     <div id="menu" class="uk-background-primary">
       <nav
         class="uk-navbar-container uk-navbar-transparent uk-light uk-animation-toggle uk-animation-scale-down"
@@ -81,6 +135,7 @@
         </div>
       </nav>
     </div>
+    <canvas id="piao" style="position:fixed"></canvas>
     <div uk-grid style="position: relative;left: 10%;top: 5%">
     
 
@@ -169,7 +224,7 @@
 </div>
     </div>
     <div id="bottom-outer">
-      <div id="bottom-inner">
+      <div id="bottom-inner uk-flex-center">
         Site by John Doe using
         <a href="https://github.com/wzy2006/mestino" target="_blank" rel="noopener">Mestino</a>.
         <br />
