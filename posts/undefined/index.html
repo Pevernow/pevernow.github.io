@@ -10,16 +10,17 @@
         <link rel="stylesheet" href="/css/mestino.css">
       
     
-    <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.staticfile.org/uikit/3.3.1/css/uikit.min.css">
-    <script src="https://cdn.staticfile.org/uikit/3.3.1/js/uikit.min.js"></script>
     <link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/uikit/3.3.1/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/js/volantis.min.js"></script>
+    <script src="/js/mestino.js" async="async"></script>
     <script src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" async="async"></script>
-    <link rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" async="async">
-    <script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js" async="async"></script>
-    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js" async="async"></script>
     <script src="//at.alicdn.com/t/font_1643892_5kllk89yikh.js" async="async"></script>
-    <script src="/js/mestino.js"></script>
+    <script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
     <!--本地搜索-->
     
     <script src="/js/search.js"></script>
@@ -81,17 +82,10 @@
       </nav>
     </div>
     <div uk-grid style="position: relative;left: 10%;top: 5%">
-    <article class="post uk-flex uk-flex-center" style="position: relative;right: 20%;top: -10%">
-  <div class="uk-card uk-card-default uk-card-hover uk-card-body uk-width-2-3">
-    <h3 class="uk-card-title">Default</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-  <div class="post-title">
-    <h2 class="title">Hello World</h2>
-  </div>
-   <div class="post-meta">
-    <span class="post-time">2020-02-17</span>
-  </div>
-  <div class="post-content">
+    <div class="uk-width-3-5">
+  <article class="uk-card uk-card-default uk-card-hover uk-card-body " style="position: relative;top: 1%;border-radius: 5%;">
+    <h1>Hello World</h1>
+    <span class="">2020-02-17</span>
     <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
@@ -106,9 +100,18 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
+  </article>
+  <div class="uk-card uk-card-default uk-card-body uk-card-hover" style="position: relative;top: 2%;border-radius: 10%;">
+    <div id="vcomments"></div>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'AweNjIlaOQXlrkimpfUVSMu1-MdYXbMMI',
+        appKey: 'HJ7hCb9aMO5DSJB3LLsgCN8K'
+    })
+</script>
   </div>
 </div>
-</article>
     <div class="uk-width-1-3" style="position: relative;left: 1%;top: -20%">
     <div class="uk-width-3-4" uk-grid>
     
@@ -152,12 +155,8 @@
 </div>
 
     
-    <div class="uk-card uk-card-default uk-card-body uk-card-hover" style="border-radius: 5%;margin: 0px 0px 0px 0px">
-    <meting-js
-	server="netease"
-	type="playlist"
-	id="60198">
-</meting-js>
+    <div class="uk-card uk-card-default uk-card-body uk-card-hover" style="border-radius: 5%;">
+    <meting-js server="netease" type="playlist" id="4868229256" autoplay="false"></meting-js>
 </div>
     
     </div>
