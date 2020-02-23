@@ -1,1 +1,26 @@
-
+.space{
+width: 5%
+}
+.round_icon{
+    width: 75%;
+    height: 75%;
+    display: flex;
+    border-radius: 75%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.icon {
+   width: 3em;
+   height: 3em;
+   vertical-align: -0.45em;
+   fill: currentColor;
+   overflow: hidden;
+}
+.sicon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
